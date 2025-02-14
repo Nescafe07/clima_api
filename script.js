@@ -8,7 +8,7 @@ document.querySelector('.busca').addEventListener('submit', async (event) => {
         showWarning('Carregando...');
 
         let results = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=
-        ${encodeURI(input)}&units=metric&lang=pt_br&appid=2856ae4e306c41e2997054b0662cd0ed`); 
+        ${encodeURI(input)}&units=metric&lang=pt_br&appid=2856ae4e306c41e2997054b0662cd0ed`);
         let json = await results.json();
 
         if(json.cod === 200) {
